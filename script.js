@@ -1,3 +1,28 @@
+// toggle dark/light mode 
+const btn = document.getElementById('toggle');
+
+// apply saved theme on load
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    btn.classList.replace("fa-moon", "fa-sun");
+}
+
+btn.onclick = () => {
+    // spin animation
+    btn.classList.add("spin");
+    setTimeout(() => btn.classList.remove("spin"), 300);
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        btn.classList.replace("fa-moon", "fa-sun");
+        localStorage.setItem("theme", "dark");
+    } else {
+        btn.classList.replace("fa-sun", "fa-moon");
+        localStorage.setItem("theme", "light");
+    }
+}
+
 // Techstack scroll animation 
 // ── Duplicate each track's content for seamless infinite scroll ──
   document.querySelectorAll('.marquee-track').forEach(track => {

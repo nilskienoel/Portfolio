@@ -20,10 +20,10 @@
             </ul>
             <div class="rightside">
                 <div class="toggle-mode">
-                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-moon" id="toggle"></i>
                 </div>
                 <div class="DLCV-btn">
-                    <a href="#">Download CV</a>
+                    <button class="CV" onclick="window.open('assets/curiculum-vitae.pdf')"><span>Download CV</span></button>
                 </div>
             </div>
         </nav>
@@ -32,9 +32,8 @@
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>HELLO, I AM</h3>
-            <h2>Noel Dadios</h2>
-            <h1>Front-end Developer and UI/UX Designer</h1>
+            <h2>Hello, I'm Noel</h2>
+            <h1 class="typingAnimation">I'm a <span></span></h1>
             <p>I craft responsive, pixel-perfect web experiences with HTML, CSS, JavaScript, React, and modern 
                 frameworks. Transforming designs into high-performance interfaces that captivate users and drive 
                 results across all devices. Let's build your digital future.
@@ -44,9 +43,9 @@
                 <a href="#contact" class="outline-btn">Get in touch!</a>
             </div>
             <div class="social-icon">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/nilskienoel"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/noel.dadios.52"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_nilskie/"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         <div class="img-right">
@@ -96,9 +95,12 @@
     <section class="projects" id="projects">
         <h1>Featured <span>Projects</span></h1>
         <div class="project-card">
-            <div class="card">
-                <img src="assets/shopflow.png" alt="" width="300">
-                <div class="card2">
+
+            <div class="card-container">
+                <div class="card-img">
+                    <img src="assets/shopflow.png" alt="">
+                </div>
+                <div class="card-content">
                     <h4>E-commerce Website</h4>
                     <p>Product catalog, Stripe checkout, real-time cart, fully responsive, blazing fast.</p>
                     <div class="techstack">
@@ -112,9 +114,11 @@
                 </div>
             </div>
 
-            <div class="card">
-                <img src="assets/recipe.png" alt="" width="300">
-                <div class="card2">
+            <div class="card-container">
+                <div class="card-img">
+                    <img src="assets/recipe.png" alt="">
+                </div>
+                <div class="card-content">
                     <h4>Recipe App</h4>
                     <p>Searchable recipe collection with timers, favorites, responsive cards, and image gallery.</p>
                     <div class="techstack">
@@ -128,12 +132,14 @@
                 </div>
             </div>
 
-            <div class="card">
-                <img src="assets/music.png" alt="" width="300">
-                <div class="card2">
+            <div class="card-container">
+                <div class="card-img">
+                    <img src="assets/music.png" alt="">
+                </div>
+                <div class="card-content">
                     <h4>Music Player</h4>
                     <p>Responsive music player with playlist, shuffle, progress bar, and visual audio waves.</p>
-                    <div class="tools">
+                    <div class="techstack">
                         <span class="tag">React</span>
                         <span class="tag">Tailwind CSS</span>
                         <span class="tag">Framer Motion</span>
@@ -150,10 +156,10 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <h1>Services</h1>
-        <p>What I do?</p>
+        <h1>My <span>Services</span></h1>
+        <p>Here are the services I offer to help bring your ideas to life.</p>
         <div class="services-content">
-            <div class="card">
+            <div class="card-container">
                 <i class="fas fa-laptop-code"></i>
                 <h2>Interactive UI</h2>
                 <p>
@@ -161,7 +167,7 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card-container">
                 <i class="fas fa-mobile-alt"></i>
                 <h2>Responsive Design</h2>
                 <p>
@@ -169,7 +175,7 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card-container">
                 <i class="fas fa-bolt"></i>
                 <h2>Performance Optimization</h2>
                 <p>
@@ -177,7 +183,7 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card-container">
                 <i class="fas fa-code"></i>
                 <h2>Web Development</h2>
                 <p>
@@ -197,7 +203,7 @@
             <div class="tab" data-filter="languages">Languages</div>
             </div>
 
-            <div class="marquee-outer">
+        <div class="marquee-outer">
             <div class="marquee-rows">
 
                 <!-- Row 1 → scrolls left -->
@@ -237,9 +243,9 @@
         <h1>Get in <span>Touch!</span></h1>
         <div class="contact-page">
             <div class="contact-info">
+                <h3>Let's work together!</h3>
                 <p>Have a project in mind or want to colaborate?<br>
                 Feel free to reach out!</p>
-
                 <div class="email-address">
                     <i class="fa-regular fa-envelope"></i>
                     <div class="info">
@@ -264,10 +270,9 @@
                     </div>
                 </div>
             </div>
-
+        
             <div class="form-container">
                 <form action="">
-                    <h3>Let's work together!</h3>
 
                     <div class="input-group">
                         <label for="name">Name</label>
@@ -295,9 +300,9 @@
     <footer>
         <div class="footer-container">
             <div class="social-icon">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/nilskienoel"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/noel.dadios.52"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_nilskie/"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
             <div class="p-footer">
