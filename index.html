@@ -3,39 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noel | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
     <header>
         <nav class="navbar">
-            <a href="#" class="logo">N<span>oel</span></a>
-            <ul>
+            <a href="#home" class="logo">N<span>oel</span></a>
+
+            <!-- Desktop nav links -->
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
             <div class="rightside">
-                <div class="toggle-mode">
+                <!-- Theme toggle — click target is the div, not just the icon -->
+                <div class="toggle-mode" id="themeToggleBtn">
                     <i class="fa-regular fa-moon" id="toggle"></i>
                 </div>
+
+                <!-- Download CV — hidden on mobile -->
                 <div class="DLCV-btn">
-                    <button class="CV" onclick="window.open('assets/curiculum-vitae.pdf')"><span>Download CV</span></button>
+                    <button class="CV" onclick="window.open('assets/curiculum-vitae.pdf')">
+                        <span>Download CV</span>
+                    </button>
+                </div>
+
+                <!-- Hamburger — visible on mobile only -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
+
+        <!-- Mobile slide-down menu -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mobile-cv-item">
+                <button class="CV" onclick="window.open('assets/curiculum-vitae.pdf')">
+                    <span>Download CV</span>
+                </button>
+            </li>
+        </ul>
     </header>
 
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
             <h2>Hello, I'm Noel</h2>
-            <h1 class="typingAnimation">I'm a <span></span></h1>
-            <p>I craft responsive, pixel-perfect web experiences with HTML, CSS, JavaScript, React, and modern 
-                frameworks. Transforming designs into high-performance interfaces that captivate users and drive 
+            <h1 class="typingAnimation">I'm a <span>Front-End Developer and UI/UX Designer</span></h1>
+            <p>I craft responsive, pixel-perfect web experiences with HTML, CSS, JavaScript, React, and modern
+                frameworks. Transforming designs into high-performance interfaces that captivate users and drive
                 results across all devices. Let's build your digital future.
             </p>
             <div class="cta-btn">
@@ -49,31 +79,30 @@
             </div>
         </div>
         <div class="img-right">
-            <div class="cover" style="text-align: center;">cover</div>
-            <img src="assets/IMG_6605.jpeg" alt="image" width="300">
+            <div class="cover"></div>
+            <img src="assets/IMG_6605.jpeg" alt="Noel" width="300">
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="img-left">
-            <img src="assets/IMG_6604.jpeg" alt="image" width="400">
+            <img src="assets/IMG_6604.jpeg" alt="About" width="400">
         </div>
         <div class="about-content">
             <h1>About <span>Me</span></h1>
             <h3>Who am I?</h3>
             <h2>I build things for the web</h2>
-            <p>I am a passionate Front-End Developer and UI/UX Designer who enjoys creating visually appealing and 
-                user-friendly digital experiences. I focus on building responsive and interactive websites using modern 
-                technologies while ensuring that every design is intuitive and easy to use. I combine creativity with 
-                problem-solving to turn ideas into functional and engaging interfaces. As I continue learning and improving 
-                my skills, I aim to develop websites and applications that not only look good but also provide meaningful 
+            <p>I am a passionate Front-End Developer and UI/UX Designer who enjoys creating visually appealing and
+                user-friendly digital experiences. I focus on building responsive and interactive websites using modern
+                technologies while ensuring that every design is intuitive and easy to use. I combine creativity with
+                problem-solving to turn ideas into functional and engaging interfaces. As I continue learning and improving
+                my skills, I aim to develop websites and applications that not only look good but also provide meaningful
                 experiences for users.
             </p>
             <div class="read-more">
                 <a href="readmore.html" class="primary-btn">Read More</a>
             </div>
-
             <div class="experience">
                 <div class="exp-card">
                     <h3>50+</h3>
@@ -95,55 +124,38 @@
     <section class="projects" id="projects">
         <h1>Featured <span>Projects</span></h1>
         <div class="project-card">
-
             <div class="card-container">
-                <div class="card-img">
-                    <img src="assets/shopflow.png" alt="">
-                </div>
+                <div class="card-img"><img src="assets/shopflow.png" alt="E-commerce"></div>
                 <div class="card-content">
                     <h4>E-commerce Website</h4>
                     <p>Product catalog, Stripe checkout, real-time cart, fully responsive, blazing fast.</p>
                     <div class="techstack">
-                        <span class="tag">React</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Express.js</span>
-                        <span class="tag">MongoDB</span>
+                        <span class="tag">React</span><span class="tag">Tailwind CSS</span>
+                        <span class="tag">Node.js</span><span class="tag">Python</span>
+                        <span class="tag">Express.js</span><span class="tag">MongoDB</span>
                     </div>
                 </div>
             </div>
-
             <div class="card-container">
-                <div class="card-img">
-                    <img src="assets/recipe.png" alt="">
-                </div>
+                <div class="card-img"><img src="assets/recipe.png" alt="Recipe App"></div>
                 <div class="card-content">
                     <h4>Recipe App</h4>
                     <p>Searchable recipe collection with timers, favorites, responsive cards, and image gallery.</p>
                     <div class="techstack">
-                        <span class="tag">React/Next.js</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Express.js</span>
-                        <span class="tag">MySQL</span>
+                        <span class="tag">React/Next.js</span><span class="tag">Tailwind CSS</span>
+                        <span class="tag">Node.js</span><span class="tag">PHP</span>
+                        <span class="tag">Express.js</span><span class="tag">MySQL</span>
                     </div>
                 </div>
             </div>
-
             <div class="card-container">
-                <div class="card-img">
-                    <img src="assets/music.png" alt="">
-                </div>
+                <div class="card-img"><img src="assets/music.png" alt="Music Player"></div>
                 <div class="card-content">
                     <h4>Music Player</h4>
                     <p>Responsive music player with playlist, shuffle, progress bar, and visual audio waves.</p>
                     <div class="techstack">
-                        <span class="tag">React</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Framer Motion</span>
-                        <span class="tag">Howler.js</span>
+                        <span class="tag">React</span><span class="tag">Tailwind CSS</span>
+                        <span class="tag">Framer Motion</span><span class="tag">Howler.js</span>
                         <span class="tag">Lucide React</span>
                     </div>
                 </div>
@@ -162,80 +174,65 @@
             <div class="card-container">
                 <i class="fas fa-laptop-code"></i>
                 <h2>Interactive UI</h2>
-                <p>
-                    Creating visually appealing and user-friendly interfaces for websites and applications.
-                </p>
+                <p>Creating visually appealing and user-friendly interfaces for websites and applications.</p>
             </div>
-
             <div class="card-container">
                 <i class="fas fa-mobile-alt"></i>
                 <h2>Responsive Design</h2>
-                <p>
-                    Ensuring layouts adapt seamlessly across different devices and screen sizes.
-                </p>
+                <p>Ensuring layouts adapt seamlessly across different devices and screen sizes.</p>
             </div>
-
             <div class="card-container">
                 <i class="fas fa-bolt"></i>
                 <h2>Performance Optimization</h2>
-                <p>
-                    Optimizing websites for speed, accessibility, and seamless user experience.
-                </p>
+                <p>Optimizing websites for speed, accessibility, and seamless user experience.</p>
             </div>
-
             <div class="card-container">
                 <i class="fas fa-code"></i>
                 <h2>Web Development</h2>
-                <p>
-                    Building modern, fast, and responsive websites using clean and efficient code.
-                </p>
+                <p>Building modern, fast, and responsive websites using clean and efficient code.</p>
             </div>
         </div>
+
+        <!-- Tech Stack -->
         <div class="tech-section">
             <h1>Tech Stack & <span>Technologies</span></h1>
-
             <div class="filter-tabs">
-            <div class="tab active" data-filter="all">All Skills</div>
-            <div class="tab" data-filter="frontend">Front-end</div>
-            <div class="tab" data-filter="backend">Back-end</div>
-            <div class="tab" data-filter="database">Database</div>
-            <div class="tab" data-filter="tools">Tools</div>
-            <div class="tab" data-filter="languages">Languages</div>
+                <div class="tab active" data-filter="all">All Skills</div>
+                <div class="tab" data-filter="frontend">Front-end</div>
+                <div class="tab" data-filter="backend">Back-end</div>
+                <div class="tab" data-filter="database">Database</div>
+                <div class="tab" data-filter="tools">Tools</div>
+                <div class="tab" data-filter="languages">Languages</div>
             </div>
-
-        <div class="marquee-outer">
-            <div class="marquee-rows">
-
-                <!-- Row 1 → scrolls left -->
-                <div class="marquee-track" id="row1">
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>React</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"/>Next.js</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"/>Vue.js</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS"/>Tailwind CSS</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</div>
-                <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>Node.js</div>
-                <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" style="filter:invert(1) brightness(0)"/>Express.js</div>
-                <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/>PHP</div>
-                <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>MongoDB</div>
-                </div>
-
-                <!-- Row 2 → scrolls right (reverse) -->
-                <div class="marquee-track reverse" id="row2">
-                <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>PostgreSQL</div>
-                <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>MySQL</div>
-                <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>GitHub</div>
-                <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>Figma</div>
-                <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/>VS Code</div>
-                <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" style="filter:invert(1) brightness(0)"/>Vercel</div>
-                <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</div>
-                <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>TypeScript</div>
-                <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>Python</div>
-                <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>React</div>
+            <div class="marquee-outer">
+                <div class="marquee-rows">
+                    <div class="marquee-track" id="row1">
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>React</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>HTML</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"/>Next.js</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"/>Vue.js</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS"/>Tailwind CSS</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>CSS</div>
+                        <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>Node.js</div>
+                        <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" style="filter:invert(1) brightness(0)"/>Express.js</div>
+                        <div class="badge" data-cat="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/>PHP</div>
+                        <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>MongoDB</div>
+                    </div>
+                    <div class="marquee-track reverse" id="row2">
+                        <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>PostgreSQL</div>
+                        <div class="badge" data-cat="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>MySQL</div>
+                        <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>GitHub</div>
+                        <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>Figma</div>
+                        <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/>VS Code</div>
+                        <div class="badge" data-cat="tools"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" style="filter:invert(1) brightness(0)"/>Vercel</div>
+                        <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</div>
+                        <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>TypeScript</div>
+                        <div class="badge" data-cat="languages"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>Python</div>
+                        <div class="badge" data-cat="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>React</div>
+                    </div>
                 </div>
             </div>
         </div>
-  </div>
     </section>
 
     <!-- Contact Section -->
@@ -244,8 +241,7 @@
         <div class="contact-page">
             <div class="contact-info">
                 <h3>Let's work together!</h3>
-                <p>Have a project in mind or want to colaborate?<br>
-                Feel free to reach out!</p>
+                <p>Have a project in mind or want to collaborate?<br>Feel free to reach out!</p>
                 <div class="email-address">
                     <i class="fa-regular fa-envelope"></i>
                     <div class="info">
@@ -253,15 +249,13 @@
                         <a href="mailto:dadiosnoel@gmail.com">dadiosnoel@gmail.com</a>
                     </div>
                 </div>
-
                 <div class="phone-number">
                     <i class="fa-solid fa-phone"></i>
                     <div class="info">
                         <h3>PHONE</h3>
-                        <a href="tel:+63 997 318 5794">+63 997 318 5794</a>
+                        <a href="tel:+639973185794">+63 997 318 5794</a>
                     </div>
                 </div>
-
                 <div class="location">
                     <i class="fa-solid fa-location-dot"></i>
                     <div class="info">
@@ -270,25 +264,20 @@
                     </div>
                 </div>
             </div>
-        
             <div class="form-container">
                 <form action="">
-
                     <div class="input-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
-
                     <div class="input-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com" required>
                     </div>
-
                     <div class="input-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your message" required></textarea>
                     </div>
-
                     <div class="submit-btn">
                         <input type="submit" value="Send Message">
                     </div>
@@ -304,17 +293,17 @@
                 <a href="https://www.facebook.com/noel.dadios.52"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/_nilskie/"><i class="fa-brands fa-instagram"></i></a>
             </div>
-
             <div class="p-footer">
-                Passionate Front-End Developer crafting innovative web solutions.   |   © 2026 Noel. All right reserved
+                Passionate Front-End Developer crafting innovative web solutions. | © 2026 Noel. All rights reserved
             </div>
-
             <div class="scroll-top">
                 <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Scroll Reveal Animation -->
+     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 </html>
