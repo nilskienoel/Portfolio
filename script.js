@@ -10,7 +10,7 @@ if (localStorage.getItem("theme") === "dark") {
 btn.onclick = () => {
     // spin animation
     btn.classList.add("spin");
-    setTimeout(() => btn.classList.remove("spin"), 300);
+    setTimeout(() => btn.classList.remove("spin"), 100);
 
     document.body.classList.toggle("dark");
 
